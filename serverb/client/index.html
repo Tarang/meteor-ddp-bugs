@@ -1,0 +1,31 @@
+<head>
+  <title>serverb</title>
+</head>
+
+<body>
+  {{> listOfNumbers}}
+</body>
+
+<template name="listOfNumbers">
+  <h1>A List of Numbers</h1>
+
+	<table style="border: 1px solid black">
+		<thead>
+			<th>_id</th>
+			<th>Number</th>
+			<th>Text</th>
+
+		</thead>
+		<tbody>
+			{{#each numbers}}
+			<tr>
+				<td>{{_id}}</td>
+				<td>{{number}}</td>
+				<td>{{text}}</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>  
+	<br/>
+	<button>Fix number 7 so that it's 6 and matches the text</button>
+</template>
